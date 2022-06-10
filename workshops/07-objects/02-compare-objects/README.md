@@ -7,7 +7,7 @@ key/value pairs. Otherwise, `compareObjects` should return false. Assume the
 objects are not nested.
 
 ```javascript
-compareObjects({ name: 'nick' }, { name: 'nick' }) // -> true
+compareObjects({ name: "nick" }, { name: "nick" }); // -> true
 
-compareObjects({ name: 'zeke' }, { name: 'zeke', age: 12 }) // -> false
+compareObjects({ name: "zeke" }, { name: "zeke", age: 12 }); // -> false
 ```
