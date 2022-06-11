@@ -1,17 +1,20 @@
 // YOUR CODE BELOW
-function oddCouple(jas) {
+//oddCouple([1, 2, 3, 4, 5]); // => [1, 3]
+function oddCouple(array) {
+  let newArray = [];
   debugger;
-  let bas = [];
-  let count = 0;
-  for (let i = 0; i < jas.length; i++) {
-    // debugger;
-
-    if (jas[i] % 2 === 1 && count < 2) {
-      bas.push(jas[i]);
-      count++;
+  for (let i = 0; i < array.length; i++) {
+    let currVal = array[i];
+    if (currVal % 2 === 1) {
+      newArray.push(currVal);
+    }
+    if (newArray.length === 2) {
+      break;
     }
   }
-  return bas;
+  return newArray;
 }
-console.log(oddCouple([3, 6, 9, 12, 15]));
-console.log(oddCouple([2, 4, 6, 8])); // => []
+let newArray = oddCouple([1, 2, 3, 4, 5]);
+
+//console.log(oddCouple([1, 2, 3, 4, 5]));
+console.log(newArray);
