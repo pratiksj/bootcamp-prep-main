@@ -1,17 +1,19 @@
 // YOUR CODE BELOW
 function arrayFlattener(twoDimention) {
-  debugger;
   let flatArray = [];
   for (let i = 0; i < twoDimention.length; i++) {
-    if (Array.isArray(twoDimention[i])) {
-      for (let j = 0; j < twoDimention[i].length; j++) {
-        //j ko loop ma yedi second dimention aayo vane matra ko loop ma janxa
-        flatArray.push(twoDimention[i][j]);
-      }
+    //array vitra ko array lai flat garne tarika
+    currVal = twoDimention[i];
+    if (Array.isArray(currVal)) {
+      /*for (let j = 0; j < currVal.length; j++) {
+        flatArray.push(currVal[j]);
+      }*/
+      flatArray = flatArray.concat(currVal);
     } else {
-      flatArray.push(twoDimention[i]);
+      flatArray.push(currVal);
     }
   }
+
   return flatArray;
 }
 
